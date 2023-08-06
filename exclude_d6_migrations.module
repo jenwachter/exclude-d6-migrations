@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * https://api.drupal.org/api/drupal/core%21modules%21migrate%21migrate.api.php/function/hook_migration_plugins_alter
+ * @param array $migrations
+ * @return void
+ */
+function exclude_d6_migrations_migration_plugins_alter(array &$migrations)
+{
+  $migrations = array_filter($migrations, function (array $migration) {
+    $tags = isset($migration['migration_tags']) ? (array) $migration['migration_tags'] : [];
+    return !in_array('Drupal 6', $tags);
+  });
+}

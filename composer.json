@@ -1,0 +1,13 @@
+{
+    "name": "jenwachter/exclude-d6-migrations",
+    "description": "Filters out Drupal 6 migrations.",
+    "type": "drupal-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jen Wachter",
+            "email": "jwachter@jhu.edu"
+        }
+    ],
+    "require": {}
+}
